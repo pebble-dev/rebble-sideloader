@@ -24,9 +24,8 @@ class MainActivity : AppCompatActivity() {
         val pm: PackageManager = packageManager
         val pebbleIsInstalled: Boolean = isPackageInstalled("com.getpebble.android.basalt", pm)
 
-        // Figure out what to do based on the intent type
-        if (intent?.type?.equals("application/octet-stream") == true  && pebbleIsInstalled) {
-            handlePBW(intent) // Handle pbw being sent
+        if (pebbleIsInstalled && (intent.data != null)) {
+            handlePebbleFile(intent) // Handle pebble file being sent
             finish()
         } else if (!pebbleIsInstalled) {
             tellUserTheyNeedPebble()
@@ -56,13 +55,14 @@ class MainActivity : AppCompatActivity() {
     ) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == OPEN_REQUEST_CODE && resultCode == Activity.RESULT_OK && data != null) {
-            handlePBW(data)
+            handlePebbleFile(data)
         } else {
             tellUserCouldntOpenFile()
         }
     }
 
-    private fun handlePBW(intent: Intent) {
+    private fun handlePebbleFile(intent: Intent) {
+        //TODO: Add sanity checking
         val uri: Uri? = intent.data
         if (uri == null) {
             tellUserCouldntOpenFile()
