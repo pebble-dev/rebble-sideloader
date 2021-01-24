@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         // Figure out what to do based on the intent type
         if (intent?.type?.equals("application/octet-stream") == true) {
             handlePBW(intent) // Handle pbw being sent
-        } else {
-            tellUserCouldntOpenFile()
         }
     }
     fun handlePBW(intent: Intent) {

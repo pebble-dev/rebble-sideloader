@@ -21,6 +21,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="250dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/sideload_he"
         android:textAppearance="@style/sideload_he" />
@@ -32,6 +34,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="294dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/welcome_text"
         android:textAppearance="@style/welcome_text" />
@@ -54,6 +58,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:text="@string/made_with_love"
         android:textAppearance="@style/made_with_love"
         android:gravity="center_horizontal|bottom"
