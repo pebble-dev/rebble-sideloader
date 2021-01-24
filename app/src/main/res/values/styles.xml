@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="made_with_love">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#80FFFFFF</item>
+    </style>
+
+    <style name="welcome_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="sideload_he">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>
