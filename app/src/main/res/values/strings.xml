@@ -5,4 +5,5 @@
     <string name="browse_files">Browse Files</string>
     <string name="made_with_love">Made with &lt;3 by Alice Grey and Lavender Glaab</string>
     <string name="sideload_he">Sideload Helper by Rebble</string>
+    <string name="no_pebble">"The Pebble app is not installed! "</string>
 </resources>

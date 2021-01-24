@@ -4,6 +4,7 @@ package io.rebble.sideload
 import android.app.Activity
 import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -20,14 +21,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val pm: PackageManager = packageManager
+        val pebbleIsInstalled: Boolean = isPackageInstalled("com.getpebble.android.basalt", pm)
+
         // Figure out what to do based on the intent type
-        if (intent?.type?.equals("application/octet-stream") == true) {
+        if (intent?.type?.equals("application/octet-stream") == true  && pebbleIsInstalled) {
             handlePBW(intent) // Handle pbw being sent
             finish()
+        } else if (!pebbleIsInstalled) {
+            tellUserTheyNeedPebble()
         }
 
         val fileButton: Button = findViewById(R.id.file_select)
-        fileButton.setOnClickListener { chooseFile() }
+        fileButton.setOnClickListener {
+            if (pebbleIsInstalled) {
+                chooseFile()
+            } else {
+                tellUserTheyNeedPebble()
+            }
+        }
     }
 
     private fun chooseFile() {
@@ -59,10 +71,6 @@ class MainActivity : AppCompatActivity() {
         attemptForward(uri)
     }
 
-    private fun tellUserCouldntOpenFile() {
-        Toast.makeText(this, getString(R.string.could_not_open_file), Toast.LENGTH_SHORT).show()
-    }
-
     private fun attemptForward(fileURI: Uri?) {
         if (Build.VERSION.SDK_INT >= 24) {
             try {
@@ -79,6 +87,25 @@ class MainActivity : AppCompatActivity() {
         sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         sendIntent.data = fileURI
         startActivity(sendIntent)
+    }
+
+    private fun tellUserCouldntOpenFile() {
+        Toast.makeText(this, getString(R.string.could_not_open_file), Toast.LENGTH_SHORT).show()
+    }
+    private fun tellUserTheyNeedPebble() {
+        Toast.makeText(this, getString(R.string.no_pebble), Toast.LENGTH_LONG).show()
+    }
+
+    private fun isPackageInstalled(
+        packagename: String,
+        packageManager: PackageManager
+    ): Boolean {
+        return try {
+            packageManager.getPackageGids(packagename)
+            true
+        } catch (e: PackageManager.NameNotFoundException) {
+            false
+        }
     }
 }
 

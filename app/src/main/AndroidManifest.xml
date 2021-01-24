@@ -22,5 +22,8 @@
         </intent-filter>
         </activity>
     </application>
+    <queries>
+        <package android:name="com.getpebble.android.basalt"/>
+    </queries>
 
 </manifest>
