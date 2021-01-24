@@ -54,7 +54,6 @@ class MainActivity : AppCompatActivity() {
             tellUserCouldntOpenFile()
             return
         }
-        Toast.makeText(this, uri.toString(), Toast.LENGTH_SHORT).show()
         attemptForward(uri)
     }
 
