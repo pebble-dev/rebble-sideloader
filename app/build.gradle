@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "io.rebble.sideload"
-        minSdkVersion 16
+        minSdkVersion 18
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
