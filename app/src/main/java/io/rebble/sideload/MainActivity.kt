@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         fileButton.setOnClickListener { chooseFile() }
     }
 
-    fun chooseFile() {
+    private fun chooseFile() {
         val type = "*/*"
         val i = Intent(Intent.ACTION_GET_CONTENT)
         i.type = type
@@ -47,8 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    fun handlePBW(intent: Intent) {
+    private fun handlePBW(intent: Intent) {
         val uri: Uri? = intent.data
         if (uri == null) {
             tellUserCouldntOpenFile()
@@ -61,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, getString(R.string.could_not_open_file), Toast.LENGTH_SHORT).show()
     }
 
-    fun attemptForward(fileURI: Uri?) {
+    private fun attemptForward(fileURI: Uri?) {
         if (Build.VERSION.SDK_INT >= 24) {
             try {
                 val m: Method = StrictMode::class.java.getMethod("disableDeathOnFileUriExposure")
