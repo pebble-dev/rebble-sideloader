@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         sendIntent.component = ComponentName("com.getpebble.android.basalt", "com.getpebble.android.main.activity.MainActivity")
         sendIntent.setPackage("com.getpebble.android.basalt")
         sendIntent.action = "android.intent.action.VIEW"
+        sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         sendIntent.data = fileURI
         startActivity(sendIntent)
     }
