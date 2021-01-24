@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rebble Sideload Helper</string>
+    <string name="could_not_open_file">Failed to open file</string>
+</resources>
