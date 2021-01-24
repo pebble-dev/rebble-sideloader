@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Rebble Sideload Helper</string>
+    <string name="app_name">Sideloader</string>
     <string name="could_not_open_file">Failed to open file</string>
     <string name="welcome_text">This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. To get started, press the Browse Files button below, or open a compatible Pebble file in your Files app.</string>
     <string name="browse_files">Browse Files</string>
