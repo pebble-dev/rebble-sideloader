@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
+import android.provider.OpenableColumns
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -62,13 +63,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handlePebbleFile(intent: Intent) {
-        //TODO: Add sanity checking
-        val uri: Uri? = intent.data
-        if (uri == null) {
-            tellUserCouldntOpenFile()
-            return
-        }
-        attemptForward(uri)
+        if (isValidFile(intent))
+            attemptForward(intent.data)
+        else
+            tellUserInvalidFile()
     }
 
     private fun attemptForward(fileURI: Uri?) {
@@ -92,6 +90,9 @@ class MainActivity : AppCompatActivity() {
     private fun tellUserCouldntOpenFile() {
         Toast.makeText(this, getString(R.string.could_not_open_file), Toast.LENGTH_SHORT).show()
     }
+    private fun tellUserInvalidFile() {
+        Toast.makeText(this, getString(R.string.invalid_file), Toast.LENGTH_SHORT).show()
+    }
     private fun tellUserTheyNeedPebble() {
         Toast.makeText(this, getString(R.string.no_pebble), Toast.LENGTH_LONG).show()
     }
@@ -106,6 +107,38 @@ class MainActivity : AppCompatActivity() {
         } catch (e: PackageManager.NameNotFoundException) {
             false
         }
+    }
+
+    private fun getExtension(intent: Intent): String? {
+        intent.data?.let { returnUri ->
+            contentResolver.query(returnUri, null, null, null, null)
+        }?.use { cursor ->
+            /*
+             * Get the column indexes of the data in the Cursor,
+             * move to the first row in the Cursor, get the data,
+             * and return the last 4 characters
+             */
+            val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            cursor.moveToFirst()
+            return cursor.getString(nameIndex).takeLast(4)
+        }
+        return null
+    }
+
+    private fun isValidFile(intent: Intent): Boolean {
+        val uri: Uri? = intent.data
+        //Check first 4 bytes to make sure this is a valid file
+        val bytes = uri?.let { contentResolver.openInputStream(it) }
+        val buf = ByteArray(4)
+        bytes?.read(buf, 0, buf.size)
+        if (buf.contentEquals(byteArrayOf(0x50, 0x4B, 0x03, 0x04))) {
+            // check if the extension is correct
+            val extensions = setOf(".pbz", ".pbw", ".pbl")
+            if (getExtension(intent) in extensions) {
+                return true
+            }
+        }
+        return false
     }
 }
 
