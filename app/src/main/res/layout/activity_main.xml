@@ -41,7 +41,7 @@
         android:textAppearance="@style/welcome_text" />
 
     <Button
-        android:id="@+id/button_id"
+        android:id="@+id/file_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -49,6 +49,7 @@
         android:layout_marginTop="374dp"
         android:text="@string/browse_files"
         android:textSize="14sp"
+        android:textColor="@color/black"
         app:backgroundTint="#F9A285" />
 
     <TextView

@@ -1,29 +1,53 @@
 package io.rebble.sideload
 
 
+import android.app.Activity
 import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.lang.reflect.Method
 
 
 class MainActivity : AppCompatActivity() {
+    private val OPEN_REQUEST_CODE = 41;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val data: Uri? = intent?.data
 
         // Figure out what to do based on the intent type
         if (intent?.type?.equals("application/octet-stream") == true) {
             handlePBW(intent) // Handle pbw being sent
         }
+
+        val fileButton: Button = findViewById(R.id.file_select)
+        fileButton.setOnClickListener { chooseFile() }
     }
+
+    fun chooseFile() {
+        val type = "*/*"
+        val i = Intent(Intent.ACTION_GET_CONTENT)
+        i.type = type
+        startActivityForResult(Intent.createChooser(i, "select file"), OPEN_REQUEST_CODE)
+    }
+
+    override fun onActivityResult(
+        requestCode: Int,
+        resultCode: Int,
+        data: Intent?
+    ) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == OPEN_REQUEST_CODE && resultCode == Activity.RESULT_OK && data != null) {
+            handlePBW(data)
+        }
+    }
+
+
     fun handlePBW(intent: Intent) {
         val uri: Uri? = intent.data
         if (uri == null) {

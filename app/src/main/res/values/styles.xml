@@ -8,11 +8,12 @@
 
     <style name="welcome_text">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="sideload_he">
         <item name="android:textSize">24sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/white</item>
     </style>
+
 </resources>
