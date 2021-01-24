@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         // Figure out what to do based on the intent type
         if (intent?.type?.equals("application/octet-stream") == true) {
             handlePBW(intent) // Handle pbw being sent
+            finish()
         }
 
         val fileButton: Button = findViewById(R.id.file_select)
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == OPEN_REQUEST_CODE && resultCode == Activity.RESULT_OK && data != null) {
             handlePBW(data)
+        } else {
+            tellUserCouldntOpenFile()
         }
     }
 
