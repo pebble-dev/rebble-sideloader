@@ -1,14 +1,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/rebble_foreground_grey">
 
     <TextView
         android:id="@+id/cd_header"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/rebble_found"
+        android:textColor="@color/text_light"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,12 +21,14 @@
 
     <TextView
         android:id="@+id/cd_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/rebble_installed"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="@color/text_light"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cd_header" />
@@ -30,27 +36,26 @@
 
     <Button
         android:id="@+id/btn_uninstall"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="0dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:background="@color/rebble_orange"
         android:backgroundTint="@color/rebble_orange"
         android:text="@string/uninstall"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/text_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cd_text" />
 
     <Button
         android:id="@+id/btn_closeapp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="0dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="#00FF"

@@ -6,7 +6,7 @@
     <string name="made_with_love">Made with &lt;3 by Alice Grey and Lavender Glaab</string>
     <string name="sideload_he">Sideload Helper by Rebble</string>
     <string name="invalid_file">Invalid File!</string>
-    <string name="rebble_installed">You already have the Rebble app installed, and you shouldn\'t need this app. To sideload Pebble files, open them in youf file manager and select Rebble</string>
+    <string name="rebble_installed">You already have the Rebble app installed, and you shouldn\'t need this app. To install Pebble files, open them in your file manager and select Rebble</string>
     <string name="rebble_found">Rebble app found</string>
     <string name="uninstall">Uninstall Sideloader</string>
     <string name="close">Close App</string>
