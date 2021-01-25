@@ -1,4 +1,4 @@
-package io.rebble.sideload
+package io.rebble.charon
 
 import org.junit.Test
 
