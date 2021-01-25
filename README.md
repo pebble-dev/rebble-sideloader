@@ -26,7 +26,7 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
+
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
@@ -34,7 +34,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#building">Building</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -46,34 +46,44 @@
 </details>
 
 
-<!-- GETTING STARTED -->
+
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-TODO
+<ul>
+<li>Android Studio</li>
+</ul>
 
-### Installation
+### Building
 
-TODO
+<ol>
+<li>Clone the repo</li>
+
+```shell
+git clone git@github.com:pebble-dev/rebble-sideloader.git
+```
+
+<li>Open Android Studio and select 'Open an existing Android Studio Project'.</li>
+<li>Navigate to checked out repository.</li>
+<li>Run the application.</li>
+</ol>
 
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-TODO
+This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. To get started, press the Browse Files button below, or open a compatible Pebble file in your Files app.
 
 
-<!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/pebble-dev/rebble-sideloader/issues) for a list of proposed features (and known issues).
 
 
 
-<!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -86,14 +96,14 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
 
 * [Alice Grey](https://github.com/AliceGrey)
