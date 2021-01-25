@@ -4,13 +4,13 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/rebble_grey</item>
-        <item name="colorPrimaryVariant">@color/rebble_grey</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/rebble_background_grey</item>
+        <item name="colorPrimaryVariant">@color/rebble_background_grey</item>
+        <item name="colorOnPrimary">@color/text_light</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/rebble_orange</item>
         <item name="colorSecondaryVariant">@color/rebble_orange</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/text_dark</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
