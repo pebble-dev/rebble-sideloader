@@ -29,20 +29,25 @@ class MainActivity : AppCompatActivity() {
         val pebbleIsInstalled: Boolean = isPackageInstalled("com.getpebble.android.basalt", pm)
         val cobbleIsInstalled: Boolean = isPackageInstalled("io.rebble.cobble",pm)
 
+        if (!pebbleIsInstalled && !cobbleIsInstalled) {
+            tellUserTheyNeedPebble(this)
+        }
+
+        if (pebbleIsInstalled && (intent.data != null)) {
+            if (intent.data.toString().startsWith("http")) {
+                handlePebbleUrl(intent.data.toString())
+                finish()
+            } else {
+                handlePebbleFile(intent) // Handle pebble file being sent
+                finish()
+            }
+        }
+
         if (cobbleIsInstalled) {
             tellUserTheyHaveCobble(this)
         }
 
 
-        if (pebbleIsInstalled && (intent.data != null)) {
-            if (intent.data.toString().startsWith("http"))
-                handlePebbleUrl(intent.data.toString())
-            else
-                handlePebbleFile(intent) // Handle pebble file being sent
-                finish()
-        } else if (!pebbleIsInstalled && !cobbleIsInstalled) {
-            tellUserTheyNeedPebble(this)
-        }
 
         val fileButton: Button = findViewById(R.id.file_select)
         fileButton.setOnClickListener {
