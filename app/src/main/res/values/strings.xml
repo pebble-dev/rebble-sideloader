@@ -13,4 +13,5 @@
     <string name="get_pebble">Get Pebble</string>
     <string name="no_pebble">No Pebble app found</string>
     <string name="requires_pebble">This app requires the official Pebble app to be installed. To get the Pebble app, visit https://rebble.io/howto</string>
+    <string name="invalid_url">Invalid URL!</string>
 </resources>

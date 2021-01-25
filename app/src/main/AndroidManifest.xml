@@ -19,7 +19,31 @@
             <category android:name="android.intent.category.DEFAULT" />
             <data android:mimeType="application/octet-stream" android:scheme="content"/>
             <data android:mimeType="application/zip" android:scheme="content"/>
-        </intent-filter>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="https" android:host="store-beta.rebble.io"  android:pathPrefix="/app"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="https" android:host="apps.rebble.io" android:pathPattern="..*\\/application/..*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="https" android:host="apps.pebble.io" android:pathPattern="..*\\/application/..*"  />
+            </intent-filter>
+
+
+
         </activity>
     </application>
     <queries>

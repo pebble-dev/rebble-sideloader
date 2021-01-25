@@ -33,9 +33,13 @@ class MainActivity : AppCompatActivity() {
             tellUserTheyHaveCobble(this)
         }
 
+
         if (pebbleIsInstalled && (intent.data != null)) {
-            handlePebbleFile(intent) // Handle pebble file being sent
-            finish()
+            if (intent.data.toString().startsWith("http"))
+                handlePebbleUrl(intent.data.toString())
+            else
+                handlePebbleFile(intent) // Handle pebble file being sent
+                finish()
         } else if (!pebbleIsInstalled && !cobbleIsInstalled) {
             tellUserTheyNeedPebble(this)
         }
@@ -77,13 +81,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handlePebbleFile(intent: Intent) {
-        if (isValidFile(intent))
-            attemptForward(intent.data)
+        if(isValidFile(intent))
+            attemptForwardFile(intent.data)
         else
             tellUserInvalidFile()
     }
+    private fun handlePebbleUrl(url: String) {
+        if(isValidURL(url))
+            attemptForwardURL(url)
+        else
+            tellUserInvalidUrl()
+    }
 
-    private fun attemptForward(fileURI: Uri?) {
+    private fun attemptForwardURL(url: String) {
+        val uuid = url.substringAfterLast("/")
+        val uri = Uri.parse("pebble://appstore/$uuid")
+        val sendIntent = Intent()
+        sendIntent.component = ComponentName("com.getpebble.android.basalt", "com.getpebble.android.main.activity.MainActivity")
+        sendIntent.setPackage("com.getpebble.android.basalt")
+        sendIntent.action = "android.intent.action.VIEW"
+        sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        sendIntent.data = uri
+        startActivity(sendIntent)
+    }
+
+    private fun attemptForwardFile(fileURI: Uri?) {
         if (Build.VERSION.SDK_INT >= 24) {
             try {
                 val m: Method = StrictMode::class.java.getMethod("disableDeathOnFileUriExposure")
@@ -145,12 +167,21 @@ class MainActivity : AppCompatActivity() {
         }
         return false
     }
+    private fun isValidURL(url: String): Boolean {
+        val betaRegex = "https?:\\/\\/?(store-beta\\.rebble\\.io\\/app\\/)([a-z0-9]*)".toRegex()
+        val rebbleRegex = "https?:\\/\\/?(apps\\.rebble\\.io\\/[a-z]{2}.[A-Z]{2})\\/(application)\\/([a-z0-9]*)".toRegex()
+        val pebbleRegex = "https?:\\/\\/?(apps\\.pebble\\.io\\/[a-z]{2}.[A-Z]{2})\\/(application)\\/([a-z0-9]*)".toRegex()
+        return(betaRegex.matches(url) || rebbleRegex.matches(url) || rebbleRegex.matches(url))
+    }
 
     private fun tellUserCouldntOpenFile() {
         Toast.makeText(this, getString(R.string.could_not_open_file), Toast.LENGTH_SHORT).show()
     }
     private fun tellUserInvalidFile() {
         Toast.makeText(this, getString(R.string.invalid_file), Toast.LENGTH_SHORT).show()
+    }
+    private fun tellUserInvalidUrl() {
+        Toast.makeText(this, getString(R.string.invalid_url), Toast.LENGTH_SHORT).show()
     }
 
     private fun tellUserTheyHaveCobble(context: Context) {
