@@ -2,7 +2,9 @@ package io.rebble.charon
 
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -10,6 +12,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
 import android.provider.OpenableColumns
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -24,20 +27,31 @@ class MainActivity : AppCompatActivity() {
 
         val pm: PackageManager = packageManager
         val pebbleIsInstalled: Boolean = isPackageInstalled("com.getpebble.android.basalt", pm)
+        val cobbleIsInstalled: Boolean = isPackageInstalled("io.rebble.cobble",pm)
+
+        if (cobbleIsInstalled) {
+            tellUserTheyHaveCobble(this)
+        }
 
         if (pebbleIsInstalled && (intent.data != null)) {
             handlePebbleFile(intent) // Handle pebble file being sent
             finish()
-        } else if (!pebbleIsInstalled) {
-            tellUserTheyNeedPebble()
+        } else if (!pebbleIsInstalled && !cobbleIsInstalled) {
+            tellUserTheyNeedPebble(this)
         }
 
         val fileButton: Button = findViewById(R.id.file_select)
         fileButton.setOnClickListener {
-            if (pebbleIsInstalled) {
-                chooseFile()
-            } else {
-                tellUserTheyNeedPebble()
+            when {
+                pebbleIsInstalled -> {
+                    chooseFile()
+                }
+                cobbleIsInstalled -> {
+                    tellUserTheyHaveCobble(this)
+                }
+                else -> {
+                    tellUserTheyNeedPebble(this)
+                }
             }
         }
     }
@@ -87,15 +101,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(sendIntent)
     }
 
-    private fun tellUserCouldntOpenFile() {
-        Toast.makeText(this, getString(R.string.could_not_open_file), Toast.LENGTH_SHORT).show()
-    }
-    private fun tellUserInvalidFile() {
-        Toast.makeText(this, getString(R.string.invalid_file), Toast.LENGTH_SHORT).show()
-    }
-    private fun tellUserTheyNeedPebble() {
-        Toast.makeText(this, getString(R.string.no_pebble), Toast.LENGTH_LONG).show()
-    }
 
     private fun isPackageInstalled(
         packagename: String,
@@ -140,5 +145,59 @@ class MainActivity : AppCompatActivity() {
         }
         return false
     }
+
+    private fun tellUserCouldntOpenFile() {
+        Toast.makeText(this, getString(R.string.could_not_open_file), Toast.LENGTH_SHORT).show()
+    }
+    private fun tellUserInvalidFile() {
+        Toast.makeText(this, getString(R.string.invalid_file), Toast.LENGTH_SHORT).show()
+    }
+
+    private fun tellUserTheyHaveCobble(context: Context) {
+        val builder = AlertDialog.Builder(context)
+
+        val customLayout: View = layoutInflater
+                .inflate(R.layout.custom_cobble_dialog_fragment, null)
+
+        builder.setView(customLayout)
+
+        val uninstallButton: Button = customLayout.findViewById(R.id.btn_uninstall)
+        val closeButton: Button = customLayout.findViewById(R.id.btn_closeapp)
+
+        uninstallButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DELETE)
+            intent.data = Uri.parse("package:io.rebble.charon")
+            startActivity(intent)
+        }
+        closeButton.setOnClickListener {
+            finish()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+    private fun tellUserTheyNeedPebble(context: Context) {
+        val builder = AlertDialog.Builder(context)
+
+        val customLayout: View = layoutInflater
+                .inflate(R.layout.custom_pebble_dialog_fragment, null)
+
+        builder.setView(customLayout)
+
+        val getPebbleButton: Button = customLayout.findViewById(R.id.btn_getpebble)
+        val closeButton: Button = customLayout.findViewById(R.id.btn_closeapp)
+
+        getPebbleButton.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://rebble.io/howto"))
+            startActivity(browserIntent)
+        }
+        closeButton.setOnClickListener {
+            finish()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+
 }
 

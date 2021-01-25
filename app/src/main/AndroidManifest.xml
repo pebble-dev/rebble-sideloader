@@ -24,6 +24,8 @@
     </application>
     <queries>
         <package android:name="com.getpebble.android.basalt"/>
+        <package android:name="io.rebble.cobble"/>
     </queries>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
 
 </manifest>
