@@ -156,6 +156,7 @@ class MainActivity : AppCompatActivity() {
     private fun tellUserTheyHaveCobble(context: Context) {
         val builder = AlertDialog.Builder(context)
 
+
         val customLayout: View = layoutInflater
                 .inflate(R.layout.custom_cobble_dialog_fragment, null)
 
@@ -169,15 +170,17 @@ class MainActivity : AppCompatActivity() {
             intent.data = Uri.parse("package:io.rebble.charon")
             startActivity(intent)
         }
+        val dialog = builder.create()
         closeButton.setOnClickListener {
+            dialog.dismiss()
             finish()
         }
-        val dialog = builder.create()
         dialog.show()
     }
 
     private fun tellUserTheyNeedPebble(context: Context) {
         val builder = AlertDialog.Builder(context)
+
 
         val customLayout: View = layoutInflater
                 .inflate(R.layout.custom_pebble_dialog_fragment, null)
@@ -191,10 +194,11 @@ class MainActivity : AppCompatActivity() {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://rebble.io/howto"))
             startActivity(browserIntent)
         }
+        val dialog = builder.create()
         closeButton.setOnClickListener {
+            dialog.dismiss()
             finish()
         }
-        val dialog = builder.create()
         dialog.show()
     }
 
