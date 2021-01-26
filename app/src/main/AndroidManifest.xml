@@ -39,7 +39,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="https" android:host="apps.pebble.io" android:pathPattern="..*\\/application/..*"  />
+                <data android:scheme="https" android:host="apps.getpebble.com" android:pathPattern="..*\\/application/..*"  />
             </intent-filter>
 
 

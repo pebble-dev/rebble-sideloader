@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         if (pebbleIsInstalled && (intent.data != null)) {
             if (intent.data.toString().startsWith("http")) {
-                handlePebbleUrl(intent.data.toString())
+                handlePebbleURL(intent.data.toString())
                 finish()
             } else {
                 handlePebbleFile(intent) // Handle pebble file being sent
@@ -91,16 +91,35 @@ class MainActivity : AppCompatActivity() {
         else
             tellUserInvalidFile()
     }
-    private fun handlePebbleUrl(url: String) {
-        if(isValidURL(url))
-            attemptForwardURL(url)
-        else
-            tellUserInvalidUrl()
+
+    private fun handlePebbleURL(url:String) {
+        var matchResult : MatchResult? = null
+        val betaRegex = "https?:\\/\\/?(store-beta\\.rebble\\.io\\/app\\/)([a-z0-9]{24}).*".toRegex()
+        val rebbleRegex = "https?:\\/\\/?(apps\\.rebble\\.io\\/[a-z]{2}.[A-Z]{2})\\/(application)\\/([a-z0-9]{24}).*".toRegex()
+        val pebbleRegex = "https?:\\/\\/?(apps\\.getpebble\\.com\\/[a-z]{2}.[A-Z]{2})\\/(application)\\/([a-z0-9]{24}).*".toRegex()
+
+        matchResult = when {
+            betaRegex.matches(url) -> {
+                betaRegex.find(url);
+            }
+            rebbleRegex.matches(url) -> {
+                rebbleRegex.find(url);
+            }
+            pebbleRegex.matches(url) -> {
+                pebbleRegex.find(url);
+            }
+            else -> {
+                tellUserInvalidUrl()
+                return
+            }
+        }
+        val (site, directory, uuid) = matchResult!!.destructured
+        val uri = Uri.parse("pebble://appstore/$uuid")
+        attemptForwardURL(uri)
     }
 
-    private fun attemptForwardURL(url: String) {
-        val uuid = url.substringAfterLast("/")
-        val uri = Uri.parse("pebble://appstore/$uuid")
+
+    private fun attemptForwardURL(uri : Uri) {
         val sendIntent = Intent()
         sendIntent.component = ComponentName("com.getpebble.android.basalt", "com.getpebble.android.main.activity.MainActivity")
         sendIntent.setPackage("com.getpebble.android.basalt")
@@ -171,12 +190,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return false
-    }
-    private fun isValidURL(url: String): Boolean {
-        val betaRegex = "https?:\\/\\/?(store-beta\\.rebble\\.io\\/app\\/)([a-z0-9]*)".toRegex()
-        val rebbleRegex = "https?:\\/\\/?(apps\\.rebble\\.io\\/[a-z]{2}.[A-Z]{2})\\/(application)\\/([a-z0-9]*)".toRegex()
-        val pebbleRegex = "https?:\\/\\/?(apps\\.pebble\\.io\\/[a-z]{2}.[A-Z]{2})\\/(application)\\/([a-z0-9]*)".toRegex()
-        return(betaRegex.matches(url) || rebbleRegex.matches(url) || rebbleRegex.matches(url))
     }
 
     private fun tellUserCouldntOpenFile() {
