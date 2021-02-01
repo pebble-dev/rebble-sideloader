@@ -1,10 +1,10 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![GPL License][license-shield]][license-url]
-
-
+<p align="center">
+   <a href='https://github.com/pebble-dev/rebble-sideloader/graphs/contributors'> <img src='https://img.shields.io/github/contributors/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
+   <a href='https://github.com/pebble-dev/rebble-sideloader/network/members'> <img src='https://img.shields.io/github/forks/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
+   <a href='https://github.com/pebble-dev/rebble-sideloader/stargazers'> <img src='https://img.shields.io/github/stars/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
+  <a href='https://github.com/pebble-dev/rebble-sideloader/issues'> <img src='https://img.shields.io/github/issues/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
+  <a href='https://github.com/pebble-dev/rebble-sideloader/blob/master/LICENSE'> <img src='https://img.shields.io/github/license/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
+</p>
 
 <br />
 <p align="center">
@@ -109,18 +109,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 * [Alice Grey](https://github.com/AliceGrey)
 * [Lavender Glaab](https://github.com/piggehperson)
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/pebble-dev/rebble-sideloader.svg?style=for-the-badge
-[contributors-url]: https://github.com/pebble-dev/rebble-sideloader/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/pebble-dev/rebble-sideloader.svg?style=for-the-badge
-[forks-url]: https://github.com/pebble-dev/rebble-sideloader/network/members
-[stars-shield]: https://img.shields.io/github/stars/pebble-dev/rebble-sideloader.svg?style=for-the-badge
-[stars-url]: https://github.com/pebble-dev/rebble-sideloader/stargazers
-[issues-shield]: https://img.shields.io/github/issues/pebble-dev/rebble-sideloader.svg?style=for-the-badge
-[issues-url]: https://github.com/pebble-dev/rebble-sideloader/issues
-[license-shield]: https://img.shields.io/github/license/pebble-dev/rebble-sideloader.svg?style=for-the-badge
-[license-url]: https://github.com/pebble-dev/rebble-sideloader/blob/master/LICENSE
