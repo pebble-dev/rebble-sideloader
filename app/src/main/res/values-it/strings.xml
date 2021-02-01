@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Sideloader</string>
+    <string name="could_not_open_file">Apertura del file non riuscita</string>
+    <string name="welcome_text">Questa app ti aiuta ad aprire file con estensione .pbw, .pbl, e .pbz nell'app ufficiale di Pebble. Per cominciare, premi il bottone Esplora File qui sotto, o apri un file compatibile con Pebble nella tua app di gestione file.</string>
+    <string name="browse_files">Esplora File</string>
+    <string name="made_with_love">Fatto con &lt;3 da Alice Grey e Lavender Glaab</string>
+    <string name="sideload_he">Sideload Helper by Rebble</string>
+    <string name="invalid_file">File non valido!</string>
+    <string name="rebble_installed">Hai già l'app Rebble installata, e non dovresti avere bisogno di quest'app. Per installare i file Pebble, aprili nel tuo gestore file e seleziona Rebble</string>
+    <string name="rebble_found">App Rebble trovata</string>
+    <string name="uninstall">Disinstalla Sideloader</string>
+    <string name="close">Chiudi App</string>
+    <string name="get_pebble">Scarica Pebble</string>
+    <string name="no_pebble">Nessuna app Pebble trovata</string>
+    <string name="requires_pebble">Questa app ha bisogno dell'app ufficiale Pebble installata. Per scaricare l'app Pebble ufficiale, visita https://rebble.io/howto</string>
+    <string name="invalid_url">URL non valido!</string>
+    <string name="select_file">Seleziona file</string>
+</resources>
