@@ -12,7 +12,7 @@
     <img src="app/src/main/ic_launcher-playstore.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Rebble Sideload Helper</h3>
+  <h3 align="center">Sideload Helper by Rebble</h3>
 
   <p align="center">
     This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. 
