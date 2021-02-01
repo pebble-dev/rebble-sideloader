@@ -17,6 +17,7 @@
   <p align="center">
     This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. 
     <br />
+<a href='https://play.google.com/store/apps/details?id=io.rebble.charon&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' width=193.8 height=75 src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
     <br />
     <a href="https://github.com/pebble-dev/rebble-sideloader/issues">Report Bug</a>
     ·
