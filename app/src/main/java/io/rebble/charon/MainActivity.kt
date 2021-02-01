@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         val type = "*/*"
         val i = Intent(Intent.ACTION_GET_CONTENT)
         i.type = type
-        startActivityForResult(Intent.createChooser(i, "select file"), OPEN_REQUEST_CODE)
+        startActivityForResult(Intent.createChooser(i, getString(R.string.select_file)), OPEN_REQUEST_CODE)
     }
 
     override fun onActivityResult(
