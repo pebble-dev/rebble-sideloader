@@ -3,7 +3,7 @@
 <string name="could_not_open_file">Ouverture du fichier impossible</string>
 <string name="welcome_text">Cette application vous aide à ouvrir les fichiers .pbw, .pbl, and .pbz dans l'application Pebble officielle. Pour commencer, appuyez sur le boutton explorer les fichiers ci-dessous, ou ouvrez un fichier compatible avec l'application Pebble depuis votre explorateur de fichiers.</string>
 <string name="browse_files">Explorer les fichiers</string>
-<string name="made_with_love">Fait avec <3 par Alice Grey et Lavender Glaab</string>
+<string name="made_with_love">Fait avec &lt;3 par Alice Grey et Lavender Glaab</string>
 <string name="sideload_he">Sideload Helper par Rebble</string>
 <string name="invalid_file">Fichier invalide!</string>
 <string name="rebble_installed">Vous avez déjà l'application Rebble installée, et vous ne devriez pas avoir besoin de cette application. Pour installer des fichiers compatibles Pebble, ouvrez les dans votre explorateur de fichier et selectionnez Rebble</string>
