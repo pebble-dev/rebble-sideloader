@@ -1,9 +1,12 @@
 <p align="center">
-   <a href='https://github.com/pebble-dev/rebble-sideloader/graphs/contributors'> <img src='https://img.shields.io/github/contributors/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
-   <a href='https://github.com/pebble-dev/rebble-sideloader/network/members'> <img src='https://img.shields.io/github/forks/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
-   <a href='https://github.com/pebble-dev/rebble-sideloader/stargazers'> <img src='https://img.shields.io/github/stars/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
-  <a href='https://github.com/pebble-dev/rebble-sideloader/issues'> <img src='https://img.shields.io/github/issues/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
-  <a href='https://github.com/pebble-dev/rebble-sideloader/blob/master/LICENSE'> <img src='https://img.shields.io/github/license/pebble-dev/rebble-sideloader.svg?style=for-the-badge'/></a>
+   <a href='https://github.com/pebble-dev/rebble-sideloader/graphs/contributors'> <img src='https://img.shields.io/github/contributors/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+   <a href='https://github.com/pebble-dev/rebble-sideloader/network/members'> <img src='https://img.shields.io/github/forks/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+   <a href='https://github.com/pebble-dev/rebble-sideloader/stargazers'> <img src='https://img.shields.io/github/stars/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+  <a href='https://github.com/pebble-dev/rebble-sideloader/issues'> <img src='https://img.shields.io/github/issues/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+  <a href='https://github.com/pebble-dev/rebble-sideloader/blob/master/LICENSE'> <img src='https://img.shields.io/github/license/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+   <a title="Crowdin" target="_blank" href="https://crowdin.com/project/charon"><img src="https://badges.crowdin.net/charon/localized.svg"></a>
+
+
 </p>
 
 <br />
