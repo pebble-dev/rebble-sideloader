@@ -1,23 +1,18 @@
 <p align="center">
-   <a href='https://github.com/pebble-dev/rebble-sideloader/graphs/contributors'> <img src='https://img.shields.io/github/contributors/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
-   <a href='https://github.com/pebble-dev/rebble-sideloader/network/members'> <img src='https://img.shields.io/github/forks/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
-   <a href='https://github.com/pebble-dev/rebble-sideloader/stargazers'> <img src='https://img.shields.io/github/stars/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
-  <a href='https://github.com/pebble-dev/rebble-sideloader/issues'> <img src='https://img.shields.io/github/issues/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
-  <a href='https://github.com/pebble-dev/rebble-sideloader/blob/master/LICENSE'> <img src='https://img.shields.io/github/license/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
-   <a title="Crowdin" target="_blank" href="https://crowdin.com/project/charon"><img src="https://badges.crowdin.net/charon/localized.svg"></a>
-
-
-</p>
-
-<br />
-<p align="center">
   <a href="https://github.com/pebble-dev/rebble-sideloader">
     <img src="app/src/main/ic_launcher-playstore.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Sideload Helper by Rebble</h3>
-
+  
   <p align="center">
+     <a href='https://github.com/pebble-dev/rebble-sideloader/graphs/contributors'> <img src='https://img.shields.io/github/contributors/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+   <a href='https://github.com/pebble-dev/rebble-sideloader/network/members'> <img src='https://img.shields.io/github/forks/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+   <a href='https://github.com/pebble-dev/rebble-sideloader/stargazers'> <img src='https://img.shields.io/github/stars/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+  <a href='https://github.com/pebble-dev/rebble-sideloader/issues'> <img src='https://img.shields.io/github/issues/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+  <a href='https://github.com/pebble-dev/rebble-sideloader/blob/master/LICENSE'> <img src='https://img.shields.io/github/license/pebble-dev/rebble-sideloader.svg?style=appveyor'/></a>
+   <a title="Crowdin" target="_blank" href="https://crowdin.com/project/charon"><img src="https://badges.crowdin.net/charon/localized.svg"></a>
+   <br />
     This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. 
     <br />
 <a href='https://play.google.com/store/apps/details?id=io.rebble.charon&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' width=193.8 height=75 src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
