@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun chooseFile() {
-        val type = "*/*"
+        val type = "application/*" 
         val i = Intent(Intent.ACTION_GET_CONTENT)
         i.type = type
         startActivityForResult(Intent.createChooser(i, getString(R.string.select_file)), OPEN_REQUEST_CODE)
