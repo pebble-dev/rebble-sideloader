@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sideloader</string>
+    <string name="could_not_open_file">Öffnen der Datei nicht möglich</string>
+    <string name="welcome_text">Diese App ermöglicht es Dateien des Typs .pbw, .pbl, und .pbz mit der offiziellen Pebble-App zu öffnen. Zum Starten drücken Sie einfach auf die untenstehende Schaltfläche Dateien durchsuchen, oder öffnen Sie eine mit der Pebble-App kompatible Datei von Ihrem Dateiexplorer aus.</string>
+    <string name="browse_files">Dateien durchsuchen</string>
+    <string name="made_with_love">Mit &lt;3 erstellt von Alice Grey und Lavender Glaab</string>
+    <string name="sideload_he">Sideload-Helfer von Rebble</string>
+    <string name="invalid_file">Ungültige Datei!</string>
+    <string name="rebble_installed">Sie haben bereits die Rebble-App installiert und benötigen diese Sideloader-App nicht. Möchten Sie eine Datei öffnen, die mit Pebble kompatibel ist, öffnen Sie diese von Ihrem Dateiexplorer aus und wählen Sie diese mit der App Rebble an</string>
+    <string name="rebble_found">Die App Rebble wurde gefunden</string>
+    <string name="uninstall">Sideloader deinstallieren</string>
+    <string name="close">App schließen</string>
+    <string name="get_pebble">Pebble herunterladen</string>
+    <string name="no_pebble">Keine Rebble App gefunden</string>
+    <string name="requires_pebble">Diese App funktioniert im Zusammenspiel mit der offiziellen Pebble App. Sie können diese hier herunterladen https://rebble.io/howto</string>
+    <string name="invalid_url">Ungültige URL-Adresse!</string>
+    <string name="select_file">Datei auswählen</string>
+</resources>

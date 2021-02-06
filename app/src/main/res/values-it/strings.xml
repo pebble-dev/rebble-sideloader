@@ -15,5 +15,5 @@
     <string name="no_pebble">Nessuna app Pebble trovata</string>
     <string name="requires_pebble">Questa app ha bisogno dell\'app ufficiale Pebble installata. Per scaricare l\'app Pebble ufficiale, visita https://rebble.io/howto</string>
     <string name="invalid_url">URL non valido!</string>
-    <string name="select_file">Seleziona file</string>
+    <string name="select_file">seleziona file</string>
 </resources>
