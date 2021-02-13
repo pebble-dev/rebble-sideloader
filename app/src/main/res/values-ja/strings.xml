@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sideloader</string>
-    <string name="could_not_open_file">Failed to open file</string>
-    <string name="welcome_text">This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. To get started, press the Browse Files button below, or open a compatible Pebble file in your Files app.</string>
-    <string name="browse_files">Browse Files</string>
-    <string name="made_with_love">Made with &lt;3 by Alice Grey and Lavender Glaab</string>
+    <string name="could_not_open_file">ファイルが開けません</string>
+    <string name="welcome_text">Pebbleアプリで.pbw、.pbl、.pbzファイルを開くための補助アプリです。
+下の「ファイルを開く」を押し、Pebble向けファイルを選んでください。</string>
+    <string name="browse_files">ファイルを開く</string>
+    <string name="made_with_love">愛を込めて by Alice Grey and Lavender Glaab</string>
     <string name="sideload_he">Sideload Helper by Rebble</string>
-    <string name="invalid_file">Invalid File!</string>
-    <string name="rebble_installed">You already have the Rebble app installed, and you shouldn\'t need this app. To install Pebble files, open them in your file manager and select Rebble</string>
-    <string name="rebble_found">Rebble app found</string>
-    <string name="uninstall">Uninstall Sideloader</string>
-    <string name="close">Close App</string>
-    <string name="get_pebble">Get Pebble</string>
-    <string name="no_pebble">No Pebble app found</string>
-    <string name="requires_pebble">This app requires the official Pebble app to be installed. To get the Pebble app, visit https://rebble.io/howto</string>
-    <string name="invalid_url">Invalid URL!</string>
-    <string name="select_file">select file</string>
+    <string name="invalid_file">無効なファイル</string>
+    <string name="rebble_installed">Rebbleアプリがあるので、このアプリは要りません。Pebbleファイルをインストールするには、ファイルマネージャーで開き、Rebbleを選択します。</string>
+    <string name="rebble_found">Rebbleアプリ発見</string>
+    <string name="uninstall">Sideloaderをアンインストール</string>
+    <string name="close">アプリを終了</string>
+    <string name="get_pebble">Pebbleを入手</string>
+    <string name="no_pebble">Pebbleアプリがありません</string>
+    <string name="requires_pebble">Pebbleアプリが必要です。入手はこちらから：https://rebble.io/howto</string>
+    <string name="invalid_url">無効なURL！</string>
+    <string name="select_file">ファイルを選択</string>
 </resources>
