@@ -8,7 +8,7 @@
     <string name="made_with_love">愛を込めて by Alice Grey and Lavender Glaab</string>
     <string name="sideload_he">Sideload Helper by Rebble</string>
     <string name="invalid_file">無効なファイル</string>
-    <string name="rebble_installed">Rebbleアプリがあるので、このアプリは要りません。Pebbleファイルをインストールするには、ファイルマネージャーで開き、Rebbleを選択します。</string>
+    <string name="rebble_installed">Rebbleアプリがあるので、このアプリは要りません。Pebbleファイルをインストールするには、ファイルマネージャーで開き、Rebbleを選びます。</string>
     <string name="rebble_found">Rebbleアプリ発見</string>
     <string name="uninstall">Sideloaderをアンインストール</string>
     <string name="close">アプリを終了</string>
@@ -16,5 +16,5 @@
     <string name="no_pebble">Pebbleアプリがありません</string>
     <string name="requires_pebble">Pebbleアプリが必要です。入手はこちらから：https://rebble.io/howto</string>
     <string name="invalid_url">無効なURL！</string>
-    <string name="select_file">ファイルを選択</string>
+    <string name="select_file">ファイルを選ぶ</string>
 </resources>
