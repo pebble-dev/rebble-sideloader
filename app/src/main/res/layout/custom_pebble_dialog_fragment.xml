@@ -44,7 +44,7 @@
         android:layout_marginEnd="16dp"
         android:background="@color/rebble_orange"
         android:text="@string/get_pebble"
-        android:textColor="@color/text_dark"
+        android:textColor="@color/text_on_orange"
         app:backgroundTint="@color/rebble_orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

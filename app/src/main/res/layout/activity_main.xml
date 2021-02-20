@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/browse_files"
-        android:textColor="@color/text_dark"
+        android:textColor="@color/text_on_orange"
         android:textSize="14sp"
         app:backgroundTint="#F9A285"
         app:layout_constraintLeft_toLeftOf="parent"

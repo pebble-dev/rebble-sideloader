@@ -3,6 +3,7 @@
     <color name="rebble_background_grey">#FF333333</color>
     <color name="rebble_foreground_grey">#FF484848</color>
     <color name="rebble_orange">#FFF9A285</color>
+    <color name="text_on_orange">#B3000000</color>
     <color name="text_dark">#99FFFFFF</color>
     <color name="text_light">#FFFFFFFF</color>
 </resources>

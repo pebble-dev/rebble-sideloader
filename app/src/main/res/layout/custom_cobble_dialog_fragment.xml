@@ -45,7 +45,7 @@
         android:background="@color/rebble_orange"
         android:backgroundTint="@color/rebble_orange"
         android:text="@string/uninstall"
-        android:textColor="@color/text_dark"
+        android:textColor="@color/text_on_orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cd_text" />
