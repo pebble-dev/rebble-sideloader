@@ -47,8 +47,6 @@ class MainActivity : AppCompatActivity() {
             tellUserTheyHaveCobble(this)
         }
 
-
-
         val fileButton: Button = findViewById(R.id.file_select)
         fileButton.setOnClickListener {
             when {
@@ -118,7 +116,6 @@ class MainActivity : AppCompatActivity() {
         attemptForwardURL(uri)
     }
 
-
     private fun attemptForwardURL(uri : Uri) {
         val sendIntent = Intent()
         sendIntent.component = ComponentName("com.getpebble.android.basalt", "com.getpebble.android.main.activity.MainActivity")
@@ -146,7 +143,6 @@ class MainActivity : AppCompatActivity() {
         sendIntent.data = fileURI
         startActivity(sendIntent)
     }
-
 
     private fun isPackageInstalled(
         packagename: String,
@@ -188,6 +184,10 @@ class MainActivity : AppCompatActivity() {
             if (getExtension(intent) in extensions) {
                 return true
             }
+        }
+        else if (buf.contentEquals(byteArrayOf(0x13, 0x00, 0x00, 0x00))) {
+            if (getExtension(intent) == ".pbl")
+                return true
         }
         return false
     }
