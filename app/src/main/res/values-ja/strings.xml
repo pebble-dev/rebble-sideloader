@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sideloader</string>
+    <string name="could_not_open_file">ファイルが開けません</string>
+    <string name="welcome_text">Pebbleアプリで.pbw、.pbl、.pbzファイルを開くための補助アプリです。
+下の「ファイルを開く」を押し、Pebble向けファイルを選んでください。</string>
+    <string name="browse_files">ファイルを開く</string>
+    <string name="made_with_love">愛を込めて by Alice Grey and Lavender Glaab</string>
+    <string name="sideload_he">Sideload Helper by Rebble</string>
+    <string name="invalid_file">無効なファイル</string>
+    <string name="rebble_installed">Rebbleアプリがあるので、このアプリは要りません。Pebbleファイルをインストールするには、ファイルマネージャーで開き、Rebbleを選びます。</string>
+    <string name="rebble_found">Rebbleアプリがあります</string>
+    <string name="uninstall">Sideloaderをアンインストール</string>
+    <string name="close">アプリ終了</string>
+    <string name="get_pebble">Pebbleを入手</string>
+    <string name="no_pebble">Pebbleアプリがありません</string>
+    <string name="requires_pebble">Pebbleアプリが必要です。入手はこちらから：https://rebble.io/howto</string>
+    <string name="invalid_url">無効なURL！</string>
+    <string name="select_file">ファイルを選ぶ</string>
+</resources>
