@@ -1,0 +1,3 @@
+Initial release!
+
+The app can pick PBZ, PBW, and PBL files from the built in file picker or be a target for opening the files from a web browser or file browser.

@@ -1,0 +1,1 @@
+Added support for Rebble store link handling and Pebble store link handling. Also fixed some bugs!

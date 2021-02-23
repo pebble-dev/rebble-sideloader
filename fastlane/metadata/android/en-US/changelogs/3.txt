@@ -1,0 +1,2 @@
+Improved file type filtering for sideloading files.
+Added Spanish, Italian, German, and French localization

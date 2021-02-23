@@ -1,0 +1,1 @@
+Sideload Helper by Rebble helps you sideload Pebble watch files (.pbw, .pbl, and .pbz) and Pebble Store links into the official Pebble app.
