@@ -1,0 +1,3 @@
+Added Japanese Localization (issue #12)
+Fixed a bug where Pebble language files were being treated as invalid (issue #13)
+Fixed a regression where text on buttons was the wrong color (issue #14)
