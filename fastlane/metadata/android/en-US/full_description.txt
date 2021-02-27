@@ -1,1 +1,4 @@
 Sideload Helper by Rebble helps you sideload Pebble watch files (.pbw, .pbl, and .pbz) and Pebble Store links into the official Pebble app.
+
+Explanation of permissions:
+REQUEST_DELETE_PACKAGES - This is used so that Sideload Helper by Rebble can help the user uninstall the Sideloader app once the Pebble app replacement is released by Rebble. 
