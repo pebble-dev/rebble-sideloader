@@ -5,15 +5,15 @@
     <string name="welcome_text">Met dit programma kun je .pbw, .pbl en .pbz bestanden in de officiële Pebble app openen. Klik op de Browse Files knop hieronder, of open een geschikt Pebble bestand vanuit je Files app om te beginnen.</string>
     <string name="browse_files">Blader door bestanden</string>
     <string name="made_with_love">Gemaakt met &lt;3 door Alice Grey en Lavender Glaab</string>
-    <string name="sideload_he">Sideload Helper by Rebble</string>
-    <string name="invalid_file">Invalid File!</string>
-    <string name="rebble_installed">You already have the Rebble app installed, and you shouldn\'t need this app. To install Pebble files, open them in your file manager and select Rebble</string>
-    <string name="rebble_found">Rebble app found</string>
-    <string name="uninstall">Uninstall Sideloader</string>
-    <string name="close">Close App</string>
-    <string name="get_pebble">Get Pebble</string>
-    <string name="no_pebble">No Pebble app found</string>
-    <string name="requires_pebble">This app requires the official Pebble app to be installed. To get the Pebble app, visit https://rebble.io/howto</string>
-    <string name="invalid_url">Invalid URL!</string>
-    <string name="select_file">select file</string>
+    <string name="sideload_he">Sideload Helper door Rebble</string>
+    <string name="invalid_file">Ongeldig bestand!</string>
+    <string name="rebble_installed">Je hebt de Rebble app al geïnstalleerd en je zou deze app niet nodig moeten hebben. Om Pebble files te installeren kun je ze openen vanuit je bestandsbeheer waarna je Rebble kunt selecteren</string>
+    <string name="rebble_found">Rebble app gevonden</string>
+    <string name="uninstall">Deïnstalleer Sideloader</string>
+    <string name="close">App afsluiten</string>
+    <string name="get_pebble">Download Pebble</string>
+    <string name="no_pebble">Pebble app niet gevonden</string>
+    <string name="requires_pebble">Deze app vereist dat de officiële Pebble app geïnstalleerd is. Ga naar https://rebble.io/howto om de Pebble app te downloaden</string>
+    <string name="invalid_url">Ongeldige URL!</string>
+    <string name="select_file">selecteer bestand</string>
 </resources>
