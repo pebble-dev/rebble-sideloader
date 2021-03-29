@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Nombre_aplicacion</string>
+    <string name="app_name">Sideloader</string>
     <string name="could_not_open_file">No se ha podido abrir el archivo</string>
     <string name="welcome_text">Esta app está diseñada para poder abrir archivos de tipo .pbw, .pbl, y .pbz en la app oficial de Pebble. Para empezar, presiona el botón de Explorar Archivos, o abre un archivo compatible en la aplicación de explorador de archivos.</string>
     <string name="browse_files">Explorar Archivos</string>
