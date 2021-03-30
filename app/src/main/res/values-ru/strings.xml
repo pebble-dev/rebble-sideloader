@@ -2,9 +2,9 @@
 <resources>
     <string name="app_name">Sideloader</string>
     <string name="could_not_open_file">Не удалось открыть файл</string>
-    <string name="welcome_text">Это приложение поможет вам открыть файлы .pbw, .pbl, и .pbz в официальном приложении Pebble. Чтобы начать, нажмите кнопку Открыть файл ниже или откройте совместимый файл Pebble в вашем приложении для файлов.</string>
+    <string name="welcome_text">Это приложение поможет вам открыть файлы .pbw, .pbl, и .pbz в официальном приложении Pebble. Чтобы начать, нажмите кнопку Обзор файлов ниже или откройте совместимый файл Pebble в вашем приложении для файлов.</string>
     <string name="browse_files">Открыть файл</string>
-    <string name="made_with_love">Сделано Alice Grey и Lavender Glaab с &lt;3  </string>
+    <string name="made_with_love">Сделано Alice Grey и Lavender Glaab с &lt;3</string>
     <string name="sideload_he">Sideload Helper от Rebble</string>
     <string name="invalid_file">Неверный файл!</string>
     <string name="rebble_installed">У вас уже установлено приложение Rebble и вам не нужно это приложение. Для установки файлов Pebble откройте их в файловом менеджере и выберите Rebble</string>
