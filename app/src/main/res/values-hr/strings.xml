@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sideloader</string>
-    <string name="could_not_open_file">Failed to open file</string>
-    <string name="welcome_text">This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. To get started, press the Browse Files button below, or open a compatible Pebble file in your Files app.</string>
-    <string name="browse_files">Browse Files</string>
-    <string name="made_with_love">Made with &lt;3 by Alice Grey and Lavender Glaab</string>
+    <string name="could_not_open_file">Neuspješno otvaranje datoteke</string>
+    <string name="welcome_text">Ova aplikacija pomaže Vam otvoriti .pbw, .pbl i .pbz datoteke u službenoj aplikaciji za Pebble. Za početak, dotaknite tipku \"Pregledaj datoteke\" ispod ili otvorite kompatibilnu Pebbleovu datoteku u Vašem upravitelju datotekama.</string>
+    <string name="browse_files">Pregledaj datoteke</string>
+    <string name="made_with_love">Stvorili sa &lt;3 Alice Grey i Lavender Glaab</string>
     <string name="sideload_he">Sideload Helper by Rebble</string>
-    <string name="invalid_file">Invalid File!</string>
-    <string name="rebble_installed">You already have the Rebble app installed, and you shouldn\'t need this app. To install Pebble files, open them in your file manager and select Rebble</string>
-    <string name="rebble_found">Rebble app found</string>
-    <string name="uninstall">Uninstall Sideloader</string>
-    <string name="close">Close App</string>
-    <string name="get_pebble">Get Pebble</string>
-    <string name="no_pebble">No Pebble app found</string>
-    <string name="requires_pebble">This app requires the official Pebble app to be installed. To get the Pebble app, visit https://rebble.io/howto</string>
-    <string name="invalid_url">Invalid URL!</string>
-    <string name="select_file">select file</string>
+    <string name="invalid_file">Nevažeća datoteka!</string>
+    <string name="rebble_installed">Već imate instaliranu aplikaciju Rebble i ne treba Vam ova aplikacija. Za instalaciju Pebbleovih datoteka, otvorite ih u Vašem upravitelju datotekama i odaberite Rebble</string>
+    <string name="rebble_found">Pronađena aplikacija Rebble</string>
+    <string name="uninstall">Deinstaliraj Sideloader</string>
+    <string name="close">Zatvori aplikaciju</string>
+    <string name="get_pebble">Dohvati Pebble</string>
+    <string name="no_pebble">Nije pronađena aplikacija Pebble</string>
+    <string name="requires_pebble">Ova aplikacija zahtijeva službenu aplikaciju Pebble. Da biste dohvatili aplikaciju Pebble, posjetite https://rebble.io/howto</string>
+    <string name="invalid_url">Nevažeći URL!</string>
+    <string name="select_file">odaberi datoteku</string>
 </resources>
