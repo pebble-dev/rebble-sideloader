@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sideloader</string>
-    <string name="could_not_open_file">Failed to open file</string>
-    <string name="welcome_text">This app helps you open .pbw, .pbl, and .pbz files in the official Pebble app. To get started, press the Browse Files button below, or open a compatible Pebble file in your Files app.</string>
-    <string name="browse_files">Browse Files</string>
-    <string name="made_with_love">Made with &lt;3 by Alice Grey and Lavender Glaab</string>
-    <string name="sideload_he">Sideload Helper by Rebble</string>
-    <string name="invalid_file">Invalid File!</string>
-    <string name="rebble_installed">You already have the Rebble app installed, and you shouldn\'t need this app. To install Pebble files, open them in your file manager and select Rebble</string>
-    <string name="rebble_found">Rebble app found</string>
-    <string name="uninstall">Uninstall Sideloader</string>
-    <string name="close">Close App</string>
-    <string name="get_pebble">Get Pebble</string>
-    <string name="no_pebble">No Pebble app found</string>
-    <string name="requires_pebble">This app requires the official Pebble app to be installed. To get the Pebble app, visit https://rebble.io/howto</string>
-    <string name="invalid_url">Invalid URL!</string>
-    <string name="select_file">select file</string>
+    <string name="could_not_open_file">Falha ao abrir o arquivo</string>
+    <string name="welcome_text">Esta app ajuda você a abrir arquivos .pbw, .pbl e .pbz no aplicativo oficial do Pebble. Para começar, pressione o botão Ver Arquivos abaixo ou abra um arquivo Pebble compatível no seu aplicativo.</string>
+    <string name="browse_files">Ver Arquivos</string>
+    <string name="made_with_love">Feito com &lt;3 por Alice Grey e Lavender Glaab</string>
+    <string name="sideload_he">Auxílio de Sideload para Rebble</string>
+    <string name="invalid_file">Arquivo Inválido!</string>
+    <string name="rebble_installed">Você já tem o aplicativo Rebble instalado, e você não deve precisar deste aplicativo. Para instalar arquivos Pebble, abra-os no seu gerenciador de arquivos e selecione Rebble</string>
+    <string name="rebble_found">Aplicativo Rebble encontrado</string>
+    <string name="uninstall">Desinstalar Sideloader</string>
+    <string name="close">Fechar aplicativo</string>
+    <string name="get_pebble">Obter Pebble</string>
+    <string name="no_pebble">Nenhum aplicativo Pebble encontrado</string>
+    <string name="requires_pebble">Este app precisa que o aplicativo oficial Pebble seja instalado. Para obter o aplicativo Pebble, visite https://rebble.io/howto</string>
+    <string name="invalid_url">URL inválido!</string>
+    <string name="select_file">selecionar arquivo</string>
 </resources>
